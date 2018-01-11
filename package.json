@@ -23,8 +23,10 @@
   },
   "scripts": {
     "test": "npm run eslint && npm run mocha",
-    "eslint": "eslint src/. test/. --config .eslintrc.json",
-    "start": "node src/",
+    "eslint": "eslint src/. test/. --config .eslintrc.js",
+    "babel": "babel --presets es2015 public/index.js -o public/index_bundle.js",
+    "start": "npm run dev && node src",
+    "dev": "webpack",
     "mocha": "mocha test/ --recursive --exit"
   },
   "dependencies": {
@@ -38,6 +40,7 @@
     "compression": "^1.7.1",
     "cors": "^2.8.4",
     "helmet": "^3.9.0",
+    "html-webpack-plugin": "^2.30.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "serve-favicon": "^2.4.5",
@@ -47,6 +50,7 @@
     "eslint": "^4.9.0",
     "mocha": "^4.0.1",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "webpack": "^3.10.0"
   }
 }

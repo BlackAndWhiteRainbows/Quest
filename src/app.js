@@ -15,6 +15,7 @@ const middleware = require('./middleware');
 const services = require('./services');
 const appHooks = require('./app.hooks');
 const channels = require('./channels');
+const webpack = require('webpack');
 
 const app = express(feathers());
 
@@ -29,6 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 // Host the public folder
 app.use('/', express.static(app.get('public')));
+
 
 // Set up Plugins and providers
 app.configure(express.rest());
