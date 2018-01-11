@@ -65,11 +65,17 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 console.log('Hey guys and ladies!!');
-console.log('work dang it')
-console.log('sup itch')
+console.log('work dang it');
+console.log('hey dude')
 
 
 /***/ })
