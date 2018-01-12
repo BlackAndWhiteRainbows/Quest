@@ -25,8 +25,8 @@
     "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.js",
     "babel": "babel --presets es2015 public/index.js -o public/index_bundle.js",
-    "start": "npm run dev && node src",
-    "dev": "webpack",
+    "start": "node src",
+    "dev": "webpack --watch",
     "mocha": "mocha test/ --recursive --exit"
   },
   "dependencies": {
