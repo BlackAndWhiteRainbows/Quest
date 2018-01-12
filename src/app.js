@@ -17,6 +17,8 @@ const appHooks = require('./app.hooks');
 const channels = require('./channels');
 const webpack = require('webpack');
 
+const dbHelper = require('./database/dbHelper');
+
 const app = express(feathers());
 
 // Load app configuration
