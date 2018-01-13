@@ -4,14 +4,18 @@ console.log('hey dude');
 
 import React from "react";
 import ReactDOM from "react-dom";
+import ImageUpload from "./components/ImageUpload.jsx";
 
-const Hello = function (name) {
-  return (
-    <div>Hello, {name}</div>
-  );
-};
+class App extends React.Component {
 
-const view = Hello("Will");
+  render() {
+    return (
+      <div>
+        <p> Hello World </p>
+        <ImageUpload />
+      </div>
+    );
+  }
+}
 
-const element = document.getElementById("root");
-ReactDOM.render(view, element);
+ReactDOM.render( <App />, document.getElementById('root'));
